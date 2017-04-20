@@ -1,0 +1,40 @@
+<md-card>
+  <md-card-title>{{title}}</md-card-title>
+  <md-card-content>
+    <md-tab-group>
+      <md-tab label="Text">
+        <div style="margin: 1em 1em 1em 1em">
+          <md-input-container class="full-width">
+            <textarea mdInput [(ngModel)]="text" placeholder="Type your text"></textarea>
+          </md-input-container>
+          <div>
+            <md-slide-toggle>Use server</md-slide-toggle>
+            <p style="margin: 0em 1em 1em 3.2em">If enabled the text will be transmitted to server; if disabled the
+              hash is
+              computed without transmission.</p>
+          </div>
+          <div>
+            <md-slide-toggle>Auto hash</md-slide-toggle>
+            <p style="margin: 0em 1em 1em 3.2em">If enabled the text will be automatically hashed without the need of pushing
+              the button; if disabled the hash is computed only after pushing the button.</p>
+          </div>
+          <div>
+            <button md-fab><md-icon>send</md-icon></button>
+          </div>
+          <div><p>{{text}}</p></div>
+        </div>
+      </md-tab>
+      <md-tab label="Hexadecimal Digits">
+        <p>
+          <md-input-container class="full-width">
+            <input mdInput placeholder="Type your hexadecimal digits">
+          </md-input-container>
+        </p>
+      </md-tab>
+      <md-tab label="File">
+        <p>
+        </p>
+      </md-tab>
+    </md-tab-group>
+  </md-card-content>
+</md-card>
