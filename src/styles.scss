@@ -20,10 +20,16 @@ button.mat-raised-button {
 table, tr, td {
   border-spacing: 0px;
 }
+
 thead {
   background-color: mat-color($mat-orange, 300);
 }
+
 td {
   padding: 0.5em;
   border-bottom: 1px solid mat-color($mat-orange, 200);
+}
+
+#warn {
+  color: red;
 }

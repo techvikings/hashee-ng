@@ -19,11 +19,13 @@ import 'hammerjs';
 // View components
 import {MainViewComponent} from './main.view';
 import {PlaintextViewComponent} from './plaintext.view';
+import {HexViewComponent} from './hex.view';
 
 @NgModule({
   declarations: [
     MainViewComponent,
-    PlaintextViewComponent
+    PlaintextViewComponent,
+    HexViewComponent
   ],
   imports: [
     BrowserModule,
