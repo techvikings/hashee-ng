@@ -1,11 +1,11 @@
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import {enableProdMode} from '@angular/core';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
-import { HasheeModule } from './app/hashee.module';
-import { environment } from './environments/environment';
+import {ViewsModule} from './app/views/views.module';
+import {environment} from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(HasheeModule);
+platformBrowserDynamic().bootstrapModule(ViewsModule);

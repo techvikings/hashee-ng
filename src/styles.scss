@@ -3,8 +3,8 @@
 @include mat-core();
 
 $candy-app-primary: mat-palette($mat-orange);
-$candy-app-accent:  mat-palette($mat-orange, A200, A100, A400);
-$candy-app-warn:    mat-palette($mat-red);
+$candy-app-accent: mat-palette($mat-orange, A200, A100, A400);
+$candy-app-warn: mat-palette($mat-red);
 $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
 
 @include angular-material-theme($candy-app-theme);
@@ -15,4 +15,15 @@ $candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-
 
 button.mat-raised-button {
   background-color: mat-color($mat-orange, 500);
+}
+
+table, tr, td {
+  border-spacing: 0px;
+}
+thead {
+  background-color: mat-color($mat-orange, 300);
+}
+td {
+  padding: 0.5em;
+  border-bottom: 1px solid mat-color($mat-orange, 200);
 }

@@ -1,0 +1,40 @@
+<md-input-container class="full-width">
+  <textarea mdInput [(ngModel)]="plaintext" (keyup)="onPlaintextKeyup($event)"
+            placeholder="Type text to hash"></textarea>
+</md-input-container>
+<!--<div>
+  <md-slide-toggle>Use server</md-slide-toggle>
+  <p style="margin: 0em 1em 1em 3.2em">If enabled the text will be transmitted to server; if disabled the
+    hash is
+    computed without transmission.</p>
+</div>
+<div>
+  <md-slide-toggle>Auto hash</md-slide-toggle>
+  <p style="margin: 0em 1em 1em 3.2em">If enabled the text will be automatically hashed without the need of pushing
+    the button; if disabled the hash is computed only after pushing the button.</p>
+</div>
+<div>
+  <button md-fab>
+    <md-icon>fingerprint</md-icon>
+  </button>
+</div>-->
+<div>
+  <table style="display:block;overflow: auto">
+    <thead>
+    <tr>
+      <td>Algorithm</td>
+      <td>Hash</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let hash of hashes">
+      <td>{{hash.algorithm}}</td>
+      <td>
+        <div>
+          <pre>{{hash.hash}}</pre>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
