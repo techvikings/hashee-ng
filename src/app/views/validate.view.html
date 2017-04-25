@@ -1,0 +1,39 @@
+<div>
+  <ng2-file-input (onChange)="onFileChange($event)"></ng2-file-input>
+</div>
+<div style="padding-top: 2em">
+  <md-input-container class="full-width">
+    <input mdInput [(ngModel)]="expected" placeholder="Expected hash value">
+  </md-input-container>
+</div>
+<div style="margin-top: 1em">
+  <md-select placeholder="Hash function" [(ngModel)]="algorithm">
+    <md-option *ngFor="let algo of algorithms" [value]="algo">{{ algo }}</md-option>
+  </md-select>
+</div>
+<div style="margin-top: 2em">
+  <button md-raised-button (click)="validate()">
+    <md-icon>fingerprint</md-icon>
+    Validate
+  </button>
+</div>
+<div style="padding-top: 2em">
+  <table style="display:block;overflow:auto">
+    <thead>
+    <tr>
+      <td>Algorithm</td>
+      <td>Hash</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let hash of hashes">
+      <td>{{hash.algorithm}}</td>
+      <td>
+        <div>
+          <pre>{{hash.hash}}</pre>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

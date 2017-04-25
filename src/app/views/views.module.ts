@@ -8,9 +8,9 @@ import {HttpModule} from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
   MdButtonModule,
-  MdCardModule,
+  MdCardModule, MdGridListModule,
   MdIconModule,
-  MdInputModule,
+  MdInputModule, MdSelectModule,
   MdSlideToggleModule,
   MdTabsModule
 } from '@angular/material';
@@ -23,10 +23,12 @@ import {MainViewComponent} from './main.view';
 import {PlaintextViewComponent} from './plaintext.view';
 import {HexViewComponent} from './hex.view';
 import {BinaryViewComponent} from './binary.view';
+import {ValidateViewComponent} from './validate.view';
 
 @NgModule({
   declarations: [
     MainViewComponent,
+    ValidateViewComponent,
     PlaintextViewComponent,
     HexViewComponent,
     BinaryViewComponent
@@ -42,6 +44,8 @@ import {BinaryViewComponent} from './binary.view';
     MdButtonModule,
     MdSlideToggleModule,
     MdIconModule,
+    MdSelectModule,
+    MdGridListModule,
     Ng2FileInputModule.forRoot({
       dropText: 'Drop file here',
       browseText: 'Browse',

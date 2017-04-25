@@ -1,6 +1,6 @@
 <md-input-container class="full-width">
-  <textarea mdInput [(ngModel)]="hex" (keyup)="onHexKeyup($event)"
-            placeholder="Type hexadecimal digits to hash"></textarea>
+  <input mdInput [(ngModel)]="hex" (keyup)="onHexKeyup($event)"
+            placeholder="Type hexadecimal digits to hash">
 </md-input-container>
 <div>
   <table style="display:block;overflow: auto">
