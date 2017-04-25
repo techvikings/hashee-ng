@@ -22,7 +22,7 @@ table, tr, td {
 }
 
 thead {
-  background-color: mat-color($mat-orange, 300);
+  background-color: mat-color($mat-orange, 500);
 }
 
 td {
@@ -32,4 +32,134 @@ td {
 
 #warn {
   color: red;
+}
+
+.tab-content-wrapper {
+  margin: 2em 1em 1em 1em;
+}
+
+.ng2-file-input {
+  .ng2-file-input-drop-container {
+    min-width: 200px;
+    min-height: 50px;
+    border: 2px dashed mat-color($mat-orange, 500);
+    background-color: mat-color($mat-grey, 100);
+    padding: 7px;
+
+    button {
+      background-color: mat-color($mat-orange, 500);
+
+      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      transform: translate3d(0, 0, 0);
+      transition: background .4s cubic-bezier(.25, .8, .25, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+
+      box-sizing: border-box;
+      position: relative;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: pointer;
+      outline: 0;
+      border: none;
+      display: inline-block;
+      white-space: nowrap;
+      text-decoration: none;
+      vertical-align: baseline;
+      font-size: 14px;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      font-weight: 500;
+      text-align: center;
+      margin: 0;
+      min-width: 88px;
+      line-height: 36px;
+      padding: 0 16px;
+      border-radius: 2px;
+    }
+
+    span {
+      display: inherit;
+      padding: 2em 0em 0em 40%;
+      color: mat-color($mat-grey, 400);
+    }
+  }
+  .ng2-file-input-drop-container.file-is-over {
+    border: 2px solid mat-color($mat-green, 500);
+    color: mat-color($mat-green, 500);
+  }
+  input {
+    display: none;
+  }
+  .ng2-file-input-files {
+    margin-top: 8px;
+    .ng2-file-input-file {
+      overflow: hidden;
+      display: inline-block;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      vertical-align: middle;
+      text-align: center;
+      position: relative;
+      .ng2-file-input-file-text {
+        max-width: 110px;
+        line-height: 16px;
+        display: block;
+        padding: 2px;
+        width: auto;
+        overflow: hidden;
+        word-wrap: break-word;
+        font-size: 12px;
+      }
+      img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+    .ng2-file-input-file.image {
+      width: 120px;
+      height: 120px;
+      .ng2-file-input-file-text {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        line-height: 14px;
+        font-size: 11px;
+        background: rgba(255, 255, 255, 0.6);
+        white-space: nowrap;
+        z-index: 5;
+        text-overflow: ellipsis;
+      }
+      .ng2-file-input-file-text:hover {
+        overflow: auto;
+        white-space: pre-wrap;
+        text-overflow: initial;
+      }
+    }
+    .ng2-file-input-file.image .ng2-file-input-file-text.remove, .ng2-file-input-file-text.remove {
+      overflow: hidden;
+      position: absolute;
+      bottom: 0;
+      z-index: 3;
+      vertical-align: bottom;
+      max-width: 120px;
+      font-size: 14px;
+      line-height: 20px;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      padding: 0;
+      p {
+        position: absolute;
+        bottom: 5px;
+        width: 100%;
+        color: #fff;
+      }
+    }
+    .ng2-file-input-file.image .ng2-file-input-file-text.remove:hover, .ng2-file-input-file-text.remove:hover {
+      opacity: 1;
+      cursor: pointer;
+      background: rgba(169, 68, 66, 0.85);
+    }
+  }
 }

@@ -16,16 +16,20 @@ import {
 } from '@angular/material';
 import 'hammerjs';
 
+import {Ng2FileInputModule} from 'ng2-file-input';
+
 // View components
 import {MainViewComponent} from './main.view';
 import {PlaintextViewComponent} from './plaintext.view';
 import {HexViewComponent} from './hex.view';
+import {BinaryViewComponent} from './binary.view';
 
 @NgModule({
   declarations: [
     MainViewComponent,
     PlaintextViewComponent,
-    HexViewComponent
+    HexViewComponent,
+    BinaryViewComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +41,17 @@ import {HexViewComponent} from './hex.view';
     MdInputModule,
     MdButtonModule,
     MdSlideToggleModule,
-    MdIconModule
+    MdIconModule,
+    Ng2FileInputModule.forRoot({
+      dropText: 'Drop file here',
+      browseText: 'Browse',
+      removeText: 'Remove',
+      invalidFileText: 'You have picked an invalid or disallowed file.',
+      invalidFileTimeout: 8000,
+      removable: true,
+      multiple: false,
+      showPreviews: false
+    })
   ],
   providers: [],
   bootstrap: [
